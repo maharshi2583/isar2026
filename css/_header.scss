@@ -1,0 +1,21 @@
+#main-logo {
+    height: 97px;
+}
+
+#right-logo {
+    height: 97px;
+    display: flex;
+    // justify-content: flex-end;
+
+    .first-logo {
+        margin-top: 1rem;
+    }
+}
+
+#centerNavLinks {
+    background-color: $magenta;
+
+    .nav-link {
+        color: $white;
+    }
+}

@@ -1,0 +1,43 @@
+#footer {
+    position: relative;
+    background-color: #101130;
+    background-image: url(../images/footerbg.jpg);
+    color: $white;
+
+    .container {
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .footer-bottom {
+        position: relative;
+        width: 100%;
+        background-color: rgba(255, 255, 255, .10);
+        text-align: center;
+    }
+
+    .links {
+        color: $white;
+        transition: .3s all ease-in;
+
+        &:hover {
+            color: $magenta;
+        }
+    }
+}
+
+.footer-about {
+    list-style-type: none;
+    padding: 0;
+
+    li a {
+        transition: .3s all ease-in;
+        text-decoration: none;
+        color: $white;
+        // color: $blackish;
+    }
+}

@@ -1,9 +1,83 @@
-#thirdlogo {
-    height: 97px;
-}
+@import 'variable';
 
 #comingsoon {
-    font-size: 5rem;
-    margin-top: 7rem;
+    font-size: 4rem;
     text-align: center;
+    margin: 5rem 0;
+}
+
+::-webkit-scrollbar {
+    width: 5px !important;
+    height: 3px !important;
+    border-radius: 20px !important;
+    background-color: #f7f9fc !important;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 5px !important;
+    height: 3px !important;
+    border-radius: 20px !important;
+    background-color: $darkmagenta !important;
+}
+
+::-webkit-scrollbar-track {
+    width: 3px !important;
+    height: 3px !important;
+    border-radius: 20px !important;
+    background-color: #f7f9fc !important;
+}
+
+::selection {
+    color: $white;
+    background-color: $blue;
+}
+
+@import 'header';
+@import 'footer';
+
+.mainheading {
+    color: $magenta;
+    font-weight: bolder;
+}
+
+.bluetext {
+    color: $blue;
+}
+
+@mixin underline($color) {
+
+    @content;
+    position: relative;
+
+    &::after {
+        bottom: -1px;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: $color;
+        opacity: 0.6;
+        width: 0;
+        transform: translateX(-50%);
+        transition: width 0.3s ease, opacity 0.3s ease;
+    }
+
+    &:hover::after,
+    &:focus::after {
+        width: 100%;
+        opacity: 0.9
+    }
+}
+
+.white-underline {
+    @include underline($white);
+}
+
+.magenta-underline {
+    @include underline($magenta);
+
+    &::after {
+        bottom: -4px;
+    }
 }
