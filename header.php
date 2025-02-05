@@ -30,25 +30,39 @@
                 <li class="nav-item mx-lg-2">
                     <a class="nav-link fw-bold white-underline" href="index.php">Home</a>
                 </li>
-                <li class="nav-item mx-lg-2">
-                    <a class="nav-link fw-bold white-underline" href="#">About Us</a>
-                </li>
-                <li class="nav-item mx-lg-2">
-                    <a class="nav-link fw-bold white-underline" href="#">Organizing Committee</a>
-                </li>
                 <!-- <li class="nav-item mx-lg-2">
-                    <a class="nav-link fw-bold white-underline" href="#">Scientific Program</a>
+                    <a class="nav-link fw-bold white-underline" href="#">About Us</a>
                 </li> -->
                 <li class="nav-item mx-lg-2">
-                    <a class="nav-link fw-bold white-underline" href="#">About City</a>
+                    <a class="nav-link fw-bold white-underline" href="#">Committee</a>
                 </li>
                 <li class="nav-item mx-lg-2">
-                    <a class="nav-link fw-bold white-underline" href="#">Register
-                        Now</a>
+                    <a class="nav-link fw-bold white-underline" href="#">Faculty</a>
+                </li>
+                <li class="nav-item mx-lg-2">
+                    <a class="nav-link fw-bold white-underline" href="#">Conference Photos</a>
                 </li>
                 <!-- <li class="nav-item mx-lg-2">
-                    <a class="nav-link fw-bold white-underline" href="#">Abstract
-                        Submission</a>
+                    <a class="nav-link fw-bold white-underline" href="#">About City</a>
+                </li> -->
+                <li class="nav-item mx-lg-2">
+                    <a class="nav-link fw-bold white-underline" href="#">Award</a>
+                </li>
+                <li class="nav-item mx-lg-2">
+                    <a href="#" class="nav-link fw-bold">Certificates <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="shadow-lg p-4">
+                        <li class="nav-item"><a href="#" class="nav-link magenta-underline">Conference
+                                Certificates</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link magenta-underline">Workshop
+                                Certificates</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link magenta-underline">Abstract
+                                Certificates</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="nav-item mx-lg-2">
+                    <a class="nav-link fw-bold white-underline" href="#">Register
+                        Now</a>
                 </li> -->
                 <li class="nav-item mx-lg-2">
                     <a class="nav-link fw-bold white-underline" href="#">Contact Us</a>

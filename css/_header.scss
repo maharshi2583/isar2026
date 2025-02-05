@@ -19,3 +19,24 @@
         color: $white;
     }
 }
+
+.navbar .navbar-nav ul {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    // top: 65px;
+    transition: .3s all ease-in-out;
+    list-style-type: none;
+    background-color: $white;
+
+    a {
+        color: $magenta !important;
+    }
+}
+
+.navbar .navbar-nav li:hover>ul,
+.navbar .navbar-nav li:focus>ul {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}

@@ -54,6 +54,25 @@
   color: #ffffff;
 }
 
+.navbar .navbar-nav ul {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: 0.3s all ease-in-out;
+  list-style-type: none;
+  background-color: #ffffff;
+}
+.navbar .navbar-nav ul a {
+  color: #d12868 !important;
+}
+
+.navbar .navbar-nav li:hover > ul,
+.navbar .navbar-nav li:focus > ul {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
 #footer {
   position: relative;
   background-color: #101130;
