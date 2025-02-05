@@ -57,45 +57,45 @@
 // });
 
 // hero carousel
-// const swiper = new Swiper('.swiper', {
-//     a11y: {
-//         prevSlideMessage: 'Previous slide',
-//         nextSlideMessage: 'Next slide',
-//     },
-//     effect: 'fade',
-//     slidesPerView: 1,
-//     loop: true,
-//     pagination: {
-//         el: '.swiper-pagination',
-//         type: 'bullets',
-//         clickable: true,
-//     },
-//     autoplay: {
-//         delay: 5000,
-//     },
-//     on: {
-//         slideChangeTransitionStart: function() {
-//             // Remove animation from all slides
-//             document.querySelectorAll('.animated-text').forEach((text) => {
-//                 text.style.opacity = '0';
-//                 text.style.transform = 'translateX(-100%)';
-//                 text.style.animation = 'none'; // Reset animation
-//             });
-//         },
-//         slideChangeTransitionEnd: function() {
-//             // Add animation to the active slide's text
-//             const activeSlideTexts = document.querySelectorAll('.swiper-slide-active .animated-text');
-//             activeSlideTexts.forEach((text) => {
-//                 setTimeout(() => {
-//                     text.style.animation = ''; // Clear the reset animation property
-//                     text.style.opacity = '1';
-//                     text.style.transform = 'translateX(0)';
-//                     text.style.animation = 'fadeInLeft 1s ease-in-out forwards';
-//                 }, 1); // Small delay ensures the animation re-triggers
-//             });
-//         },
-//     },
-// });
+const swiper = new Swiper('.swiper', {
+    a11y: {
+        prevSlideMessage: 'Previous slide',
+        nextSlideMessage: 'Next slide',
+    },
+    effect: 'fade',
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+    autoplay: {
+        delay: 5000,
+    },
+    on: {
+        slideChangeTransitionStart: function() {
+            // Remove animation from all slides
+            document.querySelectorAll('.animated-text').forEach((text) => {
+                text.style.opacity = '0';
+                text.style.transform = 'translateX(-100%)';
+                text.style.animation = 'none'; // Reset animation
+            });
+        },
+        slideChangeTransitionEnd: function() {
+            // Add animation to the active slide's text
+            const activeSlideTexts = document.querySelectorAll('.swiper-slide-active .animated-text');
+            activeSlideTexts.forEach((text) => {
+                setTimeout(() => {
+                    text.style.animation = ''; // Clear the reset animation property
+                    text.style.opacity = '1';
+                    text.style.transform = 'translateX(0)';
+                    text.style.animation = 'fadeInLeft 1s ease-in-out forwards';
+                }, 1); // Small delay ensures the animation re-triggers
+            });
+        },
+    },
+});
 
 // // gallery fancybox
 // Fancybox.bind("[data-fancybox]", {

@@ -29,7 +29,7 @@
 
 ::selection {
     color: $white;
-    background-color: $blue;
+    background-color: $magenta;
 }
 
 @import 'header';
@@ -42,6 +42,10 @@
 
 .bluetext {
     color: $blue;
+}
+
+.darkmagentatext {
+    color: $darkmagenta;
 }
 
 @mixin underline($color) {
@@ -74,10 +78,450 @@
     @include underline($white);
 }
 
+.heading-underline {
+    position: relative;
+    padding-bottom: 10px;
+    width: fit-content;
+
+    &::before {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        height: 1px;
+        width: 110px;
+        background-color: $blue;
+        content: "";
+    }
+}
+
 .magenta-underline {
     @include underline($magenta);
 
     &::after {
         bottom: -4px;
+    }
+}
+
+//! hero carousel
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparentize(#f2f2f2, 0.3), transparentize(#f2f2f2, 0.3));
+}
+
+.hero-slider {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+
+    .carousel-cell {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .inner {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 70%;
+            color: $magenta;
+            padding: 0 10rem;
+
+            .subtitle {
+                font-size: 2rem;
+                line-height: 1.2em;
+                letter-spacing: 3px;
+                color: $darkmagenta;
+                margin-bottom: 2rem;
+                font-weight: 100 !important;
+            }
+
+            .title {
+                font-size: 5rem;
+                line-height: 1.2em;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-weight: 900;
+            }
+
+            .animated-text {
+                opacity: 0; // Initially hidden
+                animation: fadeInLeft 1s ease-in-out forwards;
+            }
+        }
+    }
+
+    .swiper-pagination {
+        text-align: right;
+        transform: translateX(-3%);
+
+        .swiper-pagination-bullet {
+            height: 15px;
+            width: 15px;
+            border-radius: 0;
+            background-color: $white;
+            opacity: .5;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $magenta;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @media only screen and (max-width: 992px) {
+        .carousel-cell {
+            .inner {
+                width: 100%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 650px) {
+        .carousel-cell {
+            .inner {
+                padding: 0 5rem;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .carousel-cell {
+            .inner {
+                padding: 0 3rem;
+
+                .subtitle {
+                    font-size: 1rem;
+                }
+
+                .title {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.overlay-content {
+    width: 40%;
+    background-color: rgba($magenta, $alpha: .8);
+    padding: 5rem 2.5rem;
+    border-radius: 25px;
+    text-align: center;
+    color: $white;
+    z-index: 1000;
+    position: absolute;
+    transform: translate(25%, 50%);
+
+    h4 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+        & {
+            transform: translate(20%, 25%);
+            width: 60%;
+        }
+    }
+
+    @media only screen and (max-width: 585px) {
+        & {
+            transform: translate(20%, 25%);
+            width: 70%;
+        }
+    }
+
+    @media only screen and (max-width: 520px) {
+        & {
+            transform: translate(6%, 25%);
+            width: 90%;
+            padding: 2.5rem 1.5rem;
+        }
+    }
+}
+
+//! about section
+
+#about-ahmedabad-container {
+
+    figure {
+        position: relative;
+
+        img {
+            height: 26rem;
+            width: 100%;
+        }
+
+        &::before {
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            background-image: url(../images/icon-shape.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            content: "";
+            z-index: 8;
+        }
+    }
+}
+
+//! organizing committee
+.organizing-card {
+    position: relative;
+    background-color: $white;
+    overflow: hidden;
+    padding-bottom: 30px;
+    max-width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.10);
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+
+    .image-box {
+        position: relative;
+        display: block;
+        text-align: center;
+        padding: 50px 0;
+
+        &::before {
+            position: absolute;
+            left: -10px;
+            right: -10px;
+            top: -4px;
+            height: 100%;
+            background-image: url(https://shtheme.com/demosd/eventrox/wp-content/themes/eventrox/images/icons/shape-5.png);
+            -webkit-transform: scale(-1);
+            -moz-transform: scale(-1);
+            -ms-transform: scale(-1);
+            -o-transform: scale(-1);
+            transform: scale(-1);
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-size: cover;
+            content: "";
+        }
+
+        .image {
+            position: relative;
+            display: inline-block;
+            height: 150px;
+            width: 150px;
+            overflow: hidden;
+            border: 4px solid $magenta;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.50);
+            border-radius: 50%;
+            z-index: 9;
+            margin-bottom: 0;
+            -webkit-transition: all 600ms ease;
+            -ms-transition: all 600ms ease;
+            -o-transition: all 600ms ease;
+            -moz-transition: all 600ms ease;
+            transition: all 600ms ease;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    .info-box {
+        position: relative;
+        display: inline-block;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 0;
+        background-color: $magenta;
+        margin: 0 4rem;
+        color: $white;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            right: -30px;
+            background-color: $magenta;
+            content: "";
+            top: 0;
+            height: 100%;
+            -webkit-transform: skew(-30deg);
+            -moz-transform: skew(-30deg);
+            -ms-transform: skew(-30deg);
+            -o-transform: skew(-30deg);
+            transform: skew(-30deg);
+            border-radius: 0 14px 9px 0;
+        }
+
+        h5 {
+            font-size: 1.2rem;
+        }
+
+        span {
+            font-size: 1rem;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0px 5px rgba(0, 0, 0, 0.10);
+
+        .image-box {
+            .image {
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+//! registration
+#registration-section {
+    .inner-box {
+        position: relative;
+        background-color: $white;
+        padding: 30px 30px 25px;
+        max-width: 300px;
+        margin: 0 auto;
+        border: 1px solid #dddddd;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07);
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+
+        .title {
+            position: relative;
+            display: block;
+            font-size: 20px;
+            line-height: 1.2em;
+            color: $blue;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .price-box {
+            position: relative;
+            margin-left: -30px;
+
+            .price {
+                position: relative;
+                display: inline-block;
+                font-size: 38px;
+                line-height: .9em;
+                color: $white;
+                font-weight: 600;
+                margin-bottom: 20px;
+                padding: 20px 30px;
+                padding-right: 30px;
+                border-radius: 0 50px 50px 0;
+                background: rgb(247, 0, 104);
+                -webkit-transition: all 500ms ease;
+                -moz-transition: all 500ms ease;
+                -ms-transition: all 500ms ease;
+                -o-transition: all 500ms ease;
+                transition: all 500ms ease;
+                background: -moz-linear-gradient(to left, rgba(247, 0, 104, 1) 0%, rgba(68, 16, 102, 1) 25%, rgba(247, 0, 104, 1) 75%, rgba(68, 16, 102, 1) 100%);
+                background: -webkit-linear-gradient(to left, rgba(247, 0, 104, 1) 0%, rgba(68, 16, 102, 1) 25%, rgba(247, 0, 104, 1) 75%, rgba(68, 16, 102, 1) 100%);
+                background: linear-gradient(to left, rgba(247, 0, 104) 0%, rgba(68, 16, 102, 1) 25%, rgba(247, 0, 104, 1) 75%, rgba(68, 16, 102, 1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F70068', endColorstr='#441066', GradientType=1);
+                background-size: 600% 100%;
+            }
+        }
+
+        .features {
+            position: relative;
+            max-width: 300px;
+            margin: 0 auto 20px;
+
+            li {
+                position: relative;
+                display: block;
+                font-size: 14px;
+                line-height: 30px;
+                color: $darkmagenta;
+                font-weight: 500;
+                padding: 5px 0;
+                padding-left: 30px;
+                border-bottom: 1px dashed #dddddd;
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 6px;
+                    font-size: 16px;
+                    line-height: 30px;
+                    content: "\f058";
+                    font-family: "Font Awesome 5 Free", "FontAwesome", "Font Awesome 5 Pro";
+                    color: $blue;
+                }
+            }
+        }
+
+        .btn-box {
+            position: relative;
+            text-align: center;
+
+            a {
+                position: relative;
+                font-size: 14px;
+                line-height: 25px;
+                font-weight: 500;
+                padding: 10px 30px;
+                border-radius: 30px;
+                background-color: $magenta;
+                color: $white;
+                text-decoration: none;
+                transition: .3s all ease-in-out;
+                border: 1px solid $magenta;
+
+                &:hover,
+                &:focus {
+                    background-color: $white;
+                    color: $magenta;
+                }
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.07);
+
+            .price-box {
+                .price {
+                    padding-right: 80px;
+                }
+            }
+
+            .btn-box {
+                a {
+                    border-radius: 0px;
+                }
+            }
+        }
     }
 }

@@ -24,10 +24,10 @@
                 <h4 class="fw-bold">Useful Links</h4>
                 <ul class="footer-about mt-3">
                     <li class="mb-2"><a href="#" class="magenta-underline">Home</a></li>
-                    <li class="mb-2"><a href="#" class="magenta-underline">About Us</a></li>
                     <li class="mb-2"><a href="#" class="magenta-underline">Committee</a></li>
-                    <li class="mb-2"><a href="#" class="magenta-underline">About City</a></li>
-                    <li class="mb-2"><a href="#" class="magenta-underline">Register</a></li>
+                    <li class="mb-2"><a href="#" class="magenta-underline">Faculty</a></li>
+                    <li class="mb-2"><a href="#" class="magenta-underline">Conference Photos</a></li>
+                    <li class="mb-2"><a href="#" class="magenta-underline">Award</a></li>
                     <li class="mb-2"><a href="#" class="magenta-underline">Contact</a></li>
                 </ul>
             </div>
@@ -68,6 +68,6 @@
         </div>
     </div>
     <div class="footer-bottom py-3">
-        <p class="mb-0">© Copyright ISAR2026 All Rights Reserved | Managed by RXEvents</p>
+        <p class="mb-0">© Copyright ISAR2026 All Rights Reserved | Managed by Rx Events Pvt. Ltd</p>
     </div>
 </footer>

@@ -28,6 +28,21 @@
             color: $magenta;
         }
     }
+
+    h4 {
+        position: relative;
+        padding-bottom: 10px;
+
+        &::before {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            height: 1px;
+            width: 40px;
+            background-color: $magenta;
+            content: "";
+        }
+    }
 }
 
 .footer-about {
